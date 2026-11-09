@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chloe Hui</title>
+<meta name="description" content="Chloe Hui — PhD candidate in structural bioinformatics and experimental virology, Liverpool School of Tropical Medicine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --head: #313131; --body: rgba(0,0,0,.8); --mute: rgba(0,0,0,.54);
+    --link: #1a7a9e; --pop: #6fc2e3; --rule: #e9ecef; --nav: #fff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--body);
+    font: 400 16px/1.65 Roboto, "Helvetica Neue", Arial, sans-serif; }
+  a { color: var(--link); font-weight: 500; text-decoration: none; }
+  a:hover { text-decoration: underline; text-decoration-color: var(--pop);
+    text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  h1, h2, h3 { font-family: Montserrat, "Helvetica Neue", Arial, sans-serif; }
+
+  nav { position: sticky; top: 0; z-index: 10; background: var(--nav); border-bottom: 1px solid var(--rule); }
+  .nav-in { max-width: 1000px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .brand { font-family: Montserrat, sans-serif; font-weight: 500; letter-spacing: .06em;
+    color: var(--head); text-transform: uppercase; font-size: 15px; }
+  .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .nav-links a { color: var(--mute); font-weight: 400; font-size: 14px; font-family: Montserrat, sans-serif; }
+  .nav-links a:hover { color: var(--head); text-decoration: none;
+    box-shadow: inset 0 -2px 0 var(--pop); }
+
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .hero { display: flex; gap: 48px; padding: 56px 0 8px; align-items: flex-start; }
+  .card { flex: 0 0 230px; text-align: center; }
+  .avatar { width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 18px;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--pop);
+    background: #eef1f4; color: #9aa3ad; display: flex; align-items: center; justify-content: center;
+    font-family: Montserrat, sans-serif; font-weight: 300; font-size: 46px; object-fit: cover; }
+  .card h2 { font-size: 28px; font-weight: 300; color: #000; margin: 0 0 6px; line-height: 1.25; }
+  .card h3 { font-size: 16px; font-weight: 300; color: var(--mute); margin: 0; line-height: 1.5; }
+  .social { margin-top: 18px; display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; }
+  .social a { font-size: 23px; line-height: 1; }
+  .social a:hover { text-decoration: none; color: var(--pop); }
+  .intro { flex: 1 1 auto; min-width: 0; }
+
+  section { padding: 34px 0; }
+  section + section { border-top: 1px solid var(--rule); }
+  h1.sec { font-size: 36px; font-weight: 400; color: var(--head); margin: 0 0 20px;
+    padding-bottom: 12px; border-bottom: 3px solid var(--pop); display: block; }
+  h3.sub { font-size: 20px; font-weight: 400; color: var(--head); margin: 26px 0 8px; }
+  h3.item { font-size: 21px; font-weight: 400; color: var(--head); margin: 0 0 4px; }
+  p { margin: 0 0 16px; } p:last-child { margin-bottom: 0; }
+  .meta { color: var(--mute); font-size: 14px; margin: 0 0 8px; }
+  ul.tight { margin: 0; padding-left: 20px; } ul.tight li { margin-bottom: 8px; }
+  ul.bare { list-style: none; margin: 0; padding: 0; }
+  ul.bare li { margin-bottom: 14px; } ul.bare li:last-child { margin-bottom: 0; }
+  .edu li { position: relative; padding-left: 28px; }
+  .edu li i { position: absolute; left: 0; top: 4px; color: var(--mute); font-size: 15px; }
+  .two { display: flex; gap: 48px; flex-wrap: wrap; } .two > div { flex: 1 1 260px; }
+
+  .rentry { display: flex; gap: 28px; margin-bottom: 40px; align-items: flex-start; }
+  .rentry:last-child { margin-bottom: 0; }
+  .rentry .thumb { flex: 0 0 250px; }
+  .rentry .thumb img { display: block; width: 100%; height: 165px; object-fit: cover;
+    border: 1px solid var(--rule); background: #f2f4f6; }
+  .rentry .thumb img { transition: border-color .15s ease; }
+  .rentry:hover .thumb img { border-color: var(--pop); }
+  .rentry .txt { flex: 1 1 auto; min-width: 0; }
+  .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 14px; }
+
+  .soft { display: flex; gap: 20px; margin-bottom: 20px; align-items: baseline; flex-wrap: wrap; }
+  .soft:last-child { margin-bottom: 0; }
+  .soft .nm { flex: 0 0 210px; font-family: Montserrat, sans-serif; font-weight: 500;
+    font-size: 15px; color: var(--head); }
+  .soft .ds { flex: 1 1 320px; font-size: 15px; color: var(--mute); }
+
+  .pub { margin-bottom: 22px; } .pub:last-child { margin-bottom: 0; }
+  .pub .title { color: var(--head); font-family: Montserrat, sans-serif; font-size: 17px;
+    font-weight: 400; display: block; margin-bottom: 4px; }
+  .pub .authors { font-size: 15px; } .pub .venue { font-size: 15px; color: var(--mute); }
+  .me { font-weight: 500; color: var(--body); }
+  .award { font-family: Montserrat, sans-serif; font-weight: 500; color: var(--head); }
+  .award::before { content: ""; display: inline-block; width: 7px; height: 7px;
+    background: var(--pop); margin-right: 9px; vertical-align: 2px; }
+  footer { border-top: 1px solid var(--rule); padding: 26px 0 50px; color: var(--mute); font-size: 14px; }
+
+  @media (max-width: 760px) {
+    .hero { display: block; padding-top: 36px; }
+    .card { margin-bottom: 32px; }
+    .rentry { display: block; }
+    .rentry .thumb { margin-bottom: 14px; }
+    .rentry .thumb img { height: 200px; }
+    .soft .nm { flex: 1 1 100%; }
+    h1.sec { font-size: 29px; }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <span class="brand">Chloe Hui</span>
+  <span class="nav-links">
+    <a href="#bio">Biography</a>
+    <a href="#research">Research</a>
+    <a href="#software">Software</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks &amp; posters</a>
+    <a href="#awards">Awards</a>
+  </span>
+</div></nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="card">
+      <img class="avatar" src="images/avatar.jpg" alt="Chloe Hui">
+      <h2>Chloe Hui</h2>
+      <h3>PhD Candidate</h3>
+      <h3>Liverpool School of Tropical Medicine</h3>
+      <div class="social">
+        <a href="mailto:chloe.hui@lstmed.ac.uk" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/sui-ting-chloe-hui" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/chloe-sui-ting-h-9604b824b/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://orcid.org/0009-0005-9289-9539" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid"></i></a>
+      </div>
+    </div>
+
+    <div class="intro" id="bio">
+      <h1 class="sec">Biography</h1>
+      <p>I am a PhD candidate in the Goffinet Lab at the Liverpool School of Tropical Medicine, working
+      at the intersection of structural bioinformatics, functional genomics and experimental virology.</p>
+
+      <p>My research combines computational and experimental approaches to investigate viral–host
+      interactions and understand the molecular mechanisms underlying viral persistence. I develop
+      analytical pipelines for functional genomics data, including bulk and single-cell RNA-seq,
+      ATAC-seq and DNA-seq from cell lines and human PBMCs. My work also incorporates structural
+      bioinformatics to explore protein structure, function and interactions. Working closely with
+      experimental virologists, I aim to connect computational predictions with biological evidence
+      and experimental validation.</p>
+
+      <p>My current research focuses on HIV-1 latency, particularly the mechanisms that allow
+      reactivated infected cells to evade immune clearance, and on the design of proteins targeting
+      the viral factor involved.</p>
+
+      <div class="two">
+        <div>
+          <h3 class="sub">Interests</h3>
+          <ul class="tight">
+            <li>Structural bioinformatics and protein design</li>
+            <li>HIV-1 latency and immune evasion</li>
+            <li>Comparative genomics and orthology</li>
+            <li>Reproducible pipelines and workflow engineering</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub">Education</h3>
+          <ul class="bare edu">
+            <li><i class="fa-solid fa-graduation-cap"></i>PhD in Tropical Disease Biology, 2025–<br>
+              <span class="meta">Liverpool School of Tropical Medicine</span></li>
+            <li><i class="fa-solid fa-graduation-cap"></i>MRes in Ecosystem and Environmental Changes, 2023<br>
+              <span class="meta">Imperial College London — Distinction</span></li>
+            <li><i class="fa-solid fa-graduation-cap"></i>BSc in Biology, 2022<br>
+              <span class="meta">The Chinese University of Hong Kong — Second Class, Upper Division</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="research">
+    <h1 class="sec">Research</h1>
+
+    <div class="rentry">
+      <div class="thumb"><img src="images/nef-epitope-map.jpg" alt="Nef interface map"></div>
+      <div class="txt">
+        <h3 class="item">Structure-guided design against HIV-1 Nef</h3>
+        <p class="meta"><a href="https://lstmed.ac.uk/people/christine-goffinet/">Goffinet Lab</a>, LSTM · 2026 – present</p>
+        <p>Mapping every Nef–host interface in the deposited structures to determine which surfaces a
+        designed binder could engage without competing with the host proteins already using them, and
+        whether those surfaces can present Nef to a ubiquitin ligase for degradation.</p>
+        <div class="tags">
+          <a href="https://github.com/GoffinetLab/nef-binder-design">Code &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentry">
+      <div class="thumb"><img src="images/hiv-latency.jpg" alt="HIV-1 latency reversal"></div>
+      <div class="txt">
+        <h3 class="item">Multidimensional modelling of HIV-1 latency reversal</h3>
+        <p class="meta"><a href="https://lstmed.ac.uk/people/christine-goffinet/">Goffinet Lab</a>, LSTM · 2023 – present</p>
+        <p>Transcriptomic, epigenomic and genomic analysis of latency models and patient PBMCs,
+        combining bulk and single-cell RNA-seq, ATAC-seq and proviral integration site mapping to
+        describe what latency reversal does to a cell beyond switching transcription back on. 
+        This project also includes the work that established Nef as a major antagonist of immune-mediated 
+        killing after reactivation.</p>
+        <div class="tags">
+          <a href="https://github.com/GoffinetLab/HIV_Synergistic-Latency-Reversal-study">Synergistic latency reversal study &rarr;</a>
+          <a href="https://www.biorxiv.org/content/10.1101/2025.08.06.668975v2">Preprint &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentry">
+      <div class="thumb"><img src="images/threefinger.jpg" alt="Three-finger fold structural map"></div>
+      <div class="txt">
+        <h3 class="item">Structural phylogenetics of the Ly6/uPAR three-finger fold superfamily</h3>
+        <p class="meta"><a href="https://www.unil.ch/fbm/en/home/menuinst/recherche/ssf/dbc/recherche/dessimoz.html">Dessimoz Lab</a>,
+        University of Lausanne &amp; Swiss Institute of Bioinformatics · August 2026</p>
+        <p>Built a structure-based phylogenetics pipeline with FoldTree, Foldseek and OMA to resolve
+        relationships across a superfamily where near-zero sequence identity defeats sequence-based
+        methods, and tested whether a herpesviral surface glycoprotein is a functional toxin mimic or a
+        captured host protein. I initiated this collaboration and secured the funding for the visit.</p>
+        <div class="tags">
+          <a href="https://github.com/sui-ting-chloe-hui/MIMIC">MIMIC pipeline &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentry">
+      <div class="thumb"><img src="images/trichophyton.jpg" alt="Trichophyton genomic circos plot"></div>
+      <div class="txt">
+        <h3 class="item">Genomic epidemiology of terbinafine-resistant <i>Trichophyton indotineae</i></h3>
+        <p class="meta">MRC Centre for Global Infectious Disease Analysis, Imperial College London · with <a href="https://profiles.imperial.ac.uk/matthew.fisher">Prof. Matthew Fisher</a> · 2022 – 2023</p>
+        <p>Whole-genome analysis of over 100 isolates to reconstruct the transmission of an emerging
+        drug-resistant dermatophyte across several countries.</p>
+        <div class="tags">
+          <a href="https://doi.org/10.1016/j.lanmic.2025.101273">Paper &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="software">
+    <h1 class="sec">Software</h1>
+
+    <div class="soft">
+      <div class="nm"><a href="https://github.com/sui-ting-chloe-hui/ViralSnake-DNA">ViralSnake-DNA</a></div>
+      <div class="ds">From raw reads to annotated viral variants. A Snakemake pipeline that takes
+      paired-end Illumina reads from a virus sample and finds both the consensus variants and the
+      low-frequency minor variants present in a small fraction of the population. Used for CHIKV,
+      SARS-CoV-2 and HIV-1 NL4-3; any virus with a reference genome can be added by editing one config
+      file and running one command, with no programming needed.</div>
+    </div>
+
+    <div class="soft">
+      <div class="nm"><a href="https://github.com/sui-ting-chloe-hui/MIMIC">MIMIC</a></div>
+      <div class="ds">Molecular Interface Mimicry Identification and Classification — a pipeline for
+      finding viral proteins that structurally mimic host-targeting toxins. The current case searches
+      for viral proteins that mimic snake α-neurotoxins and might engage the α7 nicotinic acetylcholine
+      receptor. The toxin family is a parameter throughout, so the pipeline runs on any toxin–receptor
+      system.</div>
+    </div>
+
+    <div class="soft">
+      <div class="nm"><a href="https://github.com/GoffinetLab/nef-binder-design">nef-binder-design</a></div>
+      <div class="ds">Interface mapping and ranking for HIV-1 Nef: per-residue buried surface area from
+      the deposited complexes, and the contested/uncontested split used to choose binder target
+      surfaces.</div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h1 class="sec">Publications</h1>
+
+    <div class="pub">
+      <span class="title">Synergistic latency reversal by the IAP antagonist AZD5582 and the BET inhibitor
+      JQ1, combined with Nef ablation, facilitates elimination of latently HIV-1-infected T cells</span>
+      <div class="authors">Postmus D, <span class="me">Hui ST</span>, Akbil B, Jansen J, Wooding D, Cingöz O, Goffinet C</div>
+      <div class="venue">Nature Communications, 2026 · Accepted ·
+        <a href="https://www.biorxiv.org/content/10.1101/2025.08.06.668975v2">bioRxiv</a></div>
+    </div>
+
+    <div class="pub">
+      <span class="title">Type I interferons sensitise HIV-1-reactivating T cells for NK cell-mediated
+      elimination despite HDACi-imposed dysregulation of innate immunity</span>
+      <div class="authors">Prigann J, Postmus D, Pietrobon AJ, <span class="me">Hui ST</span>, Wyler E, … Landthaler M, Goffinet C</div>
+      <div class="venue">Nature Microbiology, 2026 · In revision ·
+        <a href="https://www.biorxiv.org/content/10.1101/2020.05.04.075119v3">bioRxiv</a></div>
+    </div>
+
+    <div class="pub">
+      <span class="title">Emerging terbinafine-resistant <i>Trichophyton indotineae</i> between 2018 and
+      2023: a multinational genomic epidemiology study</span>
+      <div class="authors">Rhodes J, <span class="me">Hui ST</span>, Dellière S, … Abdolrasouli A, Fisher MC</div>
+      <div class="venue">The Lancet Microbe 7(2):101273, 2026 ·
+        <a href="https://doi.org/10.1016/j.lanmic.2025.101273">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <span class="title">Emerging antifungal resistance in fungal pathogens</span>
+      <div class="authors"><span class="me">Hui ST</span>, Gifford H, Rhodes J</div>
+      <div class="venue">Current Clinical Microbiology Reports 11(2):43–50, 2024 ·
+        <a href="https://doi.org/10.1007/s40588-024-00219-8">DOI</a></div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <h1 class="sec">Talks &amp; posters</h1>
+    <div class="rentry">
+      <div class="thumb"><a href="images/poster-embl-full.jpg" title="Open the full poster"><img src="images/poster-embl.jpg" alt="Poster: venom peptides as antivirals targeting viral entry"></a></div>
+      <div class="txt">
+        <h3 class="item">Venom peptides as antivirals targeting viral entry</h3>
+        <p class="meta"><a href="https://qfo2026.unil.ch/">Quest for Orthologs 9</a> ·
+        Genopode, University of Lausanne · 29–30 August 2026</p>
+        <p>Asks whether viral surface glycoproteins carry regions that mimic snake three-finger
+        toxins, and whether venom scaffolds could therefore be engineered into entry inhibitors. A
+        whole-fold structural search with α-bungarotoxin as query returned a single significant hit — a
+        squirrel-monkey herpesvirus glycoprotein annotated as a CD59 homologue — but structural
+        phylogenetics across a 48-structure set placed it firmly inside the CD59 clade, with no drift
+        toward the toxins. Whole-fold search finds relatives, not mimics.</p>
+        <div class="tags"><a href="images/poster-embl-full.jpg">Full poster &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h1 class="sec">Funding and awards</h1>
+    <ul class="bare">
+      <li><span class="award">Jean Clayton Fund</span> — LSTM, £2,200, 2026<br>
+        <span class="meta">Competitive pump-priming award for early career researchers; funds wet-lab work for my PhD project.</span></li>
+      <li><span class="award">BEACON Investment Fund</span> — LSTM, £4,210, 2026<br>
+        <span class="meta">Career development award, one of five awardees; supports my PhD project, conference attendance and the research visit to the Dessimoz Lab.</span></li>
+      <li><span class="award">Paul Bedingfield Prize</span> — LSTM, £1,150, 2026<br>
+        <span class="meta">Professional development award; funded my research visit to the Dessimoz Lab.</span></li>
+      <li><span class="award">LSTM training funding</span> — 2024–2025<br>
+        <span class="meta">Bioinformatics Workflows with Snakemake (Edinburgh) and Machine Learning of Wearables in Large Scale Biomedical Studies (Oxford).</span></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer><div class="wrap">Chloe Hui · Liverpool, UK</div></footer>
+
+</body>
+</html>
